@@ -1,0 +1,20 @@
+
+			<!-- HEADING -->
+		<h2 class="subcontainer">Available Courses</h2>
+
+<section class="services wow fadeInLeftBig animated" data-wow-offset="30" data-wow-duration="4s" id="services">
+<div class="container">
+	
+	<!-- SECTION HEADER -->
+	<div class="section-header">
+		<ul>
+			<% @courses.each do |course| %>
+			<li><%= link_to course.course_name, course %></li>
+			<% end %>
+		</ul>
+	
+	</div>
+	<!-- / END 4 services BOXES -->
+</div> <!-- / END CONTAINER -->
+</section>  <!-- / END services SECTION -->
+	

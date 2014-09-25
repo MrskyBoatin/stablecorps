@@ -1,0 +1,23 @@
+<div class="container">
+			<!-- HEADING -->
+	<h2 class="intro ">	<%= @trainer.last_name %></h2>
+
+<section class="services wow fadeInLeftBig animated" data-wow-offset="30" data-wow-duration="4s" id="services">
+<div class="container">
+	
+	<!-- SECTION HEADER -->
+<!-- 	having some problem here with the name of listed courses -->
+	<div class="section-header">
+		<p><%= @trainer.courses.count>1? "Courses: " : "Course: " %>
+		<% @trainer.courses.each do |course| %>	<%=course.course_name %>,
+		<% end %>
+		<br>Email:  <%= @trainer.email %>
+		<br>Phone Number:  <%= @trainer.phone_number %>
+    </p>
+		<p> <%= link_to "View all Trainers", trainers_path %></p>
+	</div>
+	<!-- / END 4 services BOXES -->
+</div> <!-- / END CONTAINER -->
+</section>  <!-- / END services SECTION -->
+	
+</div>

@@ -1,0 +1,38 @@
+<%= simple_form_for @student do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+   <div>
+  <% end %>
+     
+     <div class="tab-content">
+  <div class="tab-pane active" id="personal_info">
+   
+  <%= f.input :first_name, placeholder: 'Your first name please' %>
+  <%= f.input :last_name, placeholder: 'Your last name please' %>
+  <%= f.input :username, placeholder: 'Your username please' %>
+  <%= f.input :email, placeholder: 'user@domain.com' %>
+  <%= f.input :address, placeholder: 'P.O.Box ' %>
+  <%= f.input :date_of_birth, as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year - 1,
+order: [:day,:month, :year]  %>
+<!--   <%= f.input :password, hint: false, error_html: { id: 'password_error'} %> -->
+<!--   <%= f.input :password_confirmation, label: false %> -->
+<!--        <a href="new#course_selection" class="btn btn-primary custom-button white-btn">Next</a> -->
+    
+   </div>
+  <div class="tab-pane" id="course_selection">
+       
+   </div>
+  <div class="tab-pane" id="complete_registration">         <%= f.button :submit, html: { class: "btn btn-primary custom-button white-btn"  } %> </div>
+</div>
+     
+<% end %>
+    

@@ -1,0 +1,28 @@
+<div class="container">
+			<!-- HEADING -->
+	<h2 class="intro ">	<%= @student.last_name %></h2>
+
+<section class="services wow fadeInLeftBig animated" data-wow-offset="30" data-wow-duration="4s" id="services">
+<div class="container">
+	
+	<!-- SECTION HEADER -->
+	<div class="section-header">
+    <% if flash[:notice] %>
+    <div class= "flash notice"><%= flash[:notice] %></div>
+    <%else%>
+		<p>Username: <%= @student.username %>
+		<br>Course: <%= @student.course.course_name %>
+		<br>Amount Paid: <%= @student.fees  %>
+		<br>Email:  <%= @student.email %>
+		<br>Phone Number:  <%= @student.phone_number %>
+		<br>School: <%= @student.school %>
+		<br>Program of Study: <%= @student.program_of_study %></p>
+		
+		<p> <%= link_to "View all Registered Students", students_path %></p>
+	</div>
+  <%end%>
+	<!-- / END 4 services BOXES -->
+</div> <!-- / END CONTAINER -->
+</section>  <!-- / END services SECTION -->
+	
+</div>

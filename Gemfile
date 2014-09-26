@@ -6,6 +6,7 @@ gem 'devise'
 gem 'faker'
 gem 'activeadmin', github: 'activeadmin'
 gem 'jquery-turbolinks'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'

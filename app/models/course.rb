@@ -7,7 +7,7 @@ class Course < ActiveRecord::Base
   validates_presence_of :price, :message =>"can't be blank"
 	validates_presence_of :start_time, :message =>"can't be blank"
 	validates_presence_of :end_time, :message =>"can't be blank"
-  validates_presence_of :trainer_id, :message =>" phone number can't be blank"
+#   validates_presence_of :trainer_id, :message =>" Select Trainer"
   validates_presence_of :created_at, :message =>"address  can't be blank"
   validates_presence_of :updated_at, :message =>"Date of birth can't be blank"
 

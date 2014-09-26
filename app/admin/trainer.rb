@@ -1,6 +1,6 @@
 ActiveAdmin.register Trainer do
-
-
+ 
+  permit_params :first_name, :last_name, :username, :phone_number, :address, :date_of_birth, :email
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

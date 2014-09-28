@@ -19,7 +19,11 @@
   <%= form.input :last_name, placeholder: 'Your last name please' %>
   <%= form.input :username, placeholder: 'Your username please' %>
   <%= form.input :email, placeholder: 'user@domain.com' %>
+  <%= form.input :phone_number, placeholder: "Phone Number"%>
   <%= form.input :address, placeholder: 'P.O.Box ' %>
+  <%= form.input :school, placeholder: "School" %>
+  <%= form.input :program_of_study, placeholder: "Program Of Study" %>
+  <%= form.input :year, placeholder: "Year" %>
   <%= form.input :date_of_birth, as: :date, start_year: Date.today.year - 90,
                               end_year: Date.today.year - 1,
 order: [:day,:month, :year]  %>

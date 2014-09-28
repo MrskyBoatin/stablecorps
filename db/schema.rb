@@ -76,8 +76,7 @@ ActiveRecord::Schema.define(version: 20140922001552) do
     t.string   "school"
     t.string   "program_of_study"
     t.integer  "year"
-    t.integer  "fees"
-    t.integer  "course_id"
+    t.integer  "fees",                   default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                  default: "", null: false

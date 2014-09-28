@@ -1,18 +1,37 @@
 ActiveAdmin.register Course do
- permit_params :trainer_id, :course_name, :price, :start_time, :end_time
+    # permit_params :trainer_id, :course_name, :price, :start_time, :end_time
+  
+  filter :price
+  filter :start_time
+  filter :end_time
+  
+  index do
+    column :course_name
+    column :trainer
+    column :price
+    actions
+  end
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
+  form do |f|
+    f.inputs "course" do
+      f.input :course_name, placeholder: 'Course Name'
+      f.input :trainer
+      f.input :price
+      f.input :start_time
+      f.input :end_time
+      # f.input :course
+    end
+    f.actions
+  end
 
 
+  controller do
+    def permitted_params
+        params.permit(
+          :course => [:trainer_id, :course_name,
+            :price, :start_time, :end_time
+          ]
+        )
+    end
+  end
 end

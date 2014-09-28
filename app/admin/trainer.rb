@@ -1,18 +1,40 @@
 ActiveAdmin.register Trainer do
- 
-  permit_params :first_name, :last_name, :username, :phone_number, :address, :date_of_birth, :email
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
+  filter :username
+  filter :first_name
+  filter :last_name
+  filter :phone_number
+    
+  index do
+    column :first_name
+    column :last_name
+    column :username
+    column :phone_number
+    actions
+  end
+
+  form do |f|
+    f.inputs "trainer" do
+      f.input :first_name, placeholder: 'Your first name please'
+      f.input :last_name, placeholder: 'Your last name please'
+      f.input :username, placeholder: 'Your username please'
+      f.input :phone_number, placeholder: "Phone Number"
+      f.input :address, placeholder: 'P.O.Box '
+      f.input :date_of_birth
+      # f.input :course
+    end
+    f.actions
+  end
+
+  controller do
+    def permitted_params
+        params.permit(
+          :trainer => [:first_name, :last_name,
+            :username, :phone_number, :address,
+            :date_of_birth
+          ]
+        )
+    end
+  end
 
 
 end

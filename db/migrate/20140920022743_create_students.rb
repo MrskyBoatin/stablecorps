@@ -10,8 +10,8 @@ class CreateStudents < ActiveRecord::Migration
       t.string  :school
       t.string  :program_of_study
       t.integer :year, precision: 1
-      t.integer :fees, scale: 2
-      t.belongs_to :course
+      t.integer :fees, scale: 2, :default=>0
+      # t.belongs_to :course
       t.timestamps
     end
   end

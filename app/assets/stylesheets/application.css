@@ -43,7 +43,7 @@ body {
         -webkit-backface-visibility: hidden;
 }
 
-/* Internet Explorer 10 in Windows 8 and Windows Phone 8 Bug fix  *= require fullcalendar_engine/application
+/* Internet Explorer 10 in Windows 8 and Windows Phone 8 Bug fix  
 */
 @-webkit-viewport {
 	width: device-width;
@@ -61,7 +61,7 @@ body {
 	width: device-width;
 }
 
-/* Other fixes *= require fullcalendar_engine/application
+/* Other fixes 
 */
 *,*:before,*:after {
 	-webkit-box-sizing: border-box;
@@ -78,7 +78,7 @@ ul, ol {
 li {
     list-style: none;
 }
-/* Selection colours (easy to forget)  *= require fullcalendar_engine/application
+/* Selection colours (easy to forget)  
 */
 ::-moz-selection {
 	background: #054986;
@@ -118,7 +118,7 @@ p {
 
 /*---------------------------------------
  **   TYPOGRAPHY                     -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
@@ -140,7 +140,7 @@ h1 {
 }
 h2 {
 	font-size: 40px !important;
-/*	line-height: 45px; *= require fullcalendar_engine/application
+/*	line-height: 45px; 
 */
 }
 h3 {
@@ -162,7 +162,7 @@ h6 {
 
 /*---------------------------------------
  **   BUTTONS                        -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .buttons {
@@ -235,10 +235,10 @@ h6 {
 
 /*---------------------------------------
  **   COLORS                         -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
-/** BACKGROUNDS * *= require fullcalendar_engine/application
+/** BACKGROUNDS * 
 */
 .red-bg {
 	background: #e96656;
@@ -259,7 +259,7 @@ h6 {
 	background:  #FFFFFF;
 }
 
-/** FOR TEXTS AND ICON FONTS * *= require fullcalendar_engine/application
+/** FOR TEXTS AND ICON FONTS * 
 */
 .red-text {
 	color: #e96656;
@@ -287,7 +287,7 @@ h6 {
 }
 /*---------------------------------------
  **   BORDER BOTTOMS                 -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 .white-border-bottom:before {
 	position: absolute;
@@ -358,7 +358,7 @@ h6 {
 
 /*---------------------------------------
  **   FORM                           -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .input-box {
@@ -400,10 +400,10 @@ input:services {
 
 /*---------------------------------------
  **   SECTION HEADERS                -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
-/*** SECTION HEADERS ** *= require fullcalendar_engine/application
+/*** SECTION HEADERS ** 
 */
 .services,.works,.about-us,.features,.packages,.products,.testimonial,.contact-us {
 	padding-top: 30px;
@@ -422,7 +422,7 @@ input:services {
 	font-size: 16px;
 }
 
-/* PRE LOADER  *= require fullcalendar_engine/application
+/* PRE LOADER  
 */
 .preloader {
 	position: fixed;
@@ -452,12 +452,12 @@ input:services {
 =========================================
  **   SECTION STYLES                 -----
 =========================================
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 /*---------------------------------------
  **   SECTION:  HOME                  -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .header {
@@ -467,7 +467,7 @@ input:services {
 	overflow: hidden;
 }
 
-/*----  SECTION:  HOME > TOP BAR   ---- *= require fullcalendar_engine/application
+/*----  SECTION:  HOME > TOP BAR   ---- 
 */
 .navbar {
 	background:  #FFF;
@@ -549,18 +549,30 @@ input:services {
 	opacity: 1;
 }
 
-/*----  SECTION:  HOME > INTRO AND SHORT MSGS   ---- *= require fullcalendar_engine/application
+/*----  SECTION:  HOME > INTRO AND SHORT MSGS   ---- 
 */
 .intro {
 	text-align: center;
 	color: #FFF;
-	margin-top: 15%;
+	margin-top: 57%;
 	line-height: 65px;
 	z-index: 0;
 	font-family: 'Dancing Script', cursive;
 	font-weight: 700;
 	text-transform: none;
 }
+
+.intro-other {
+	text-align: center;
+	color: #FFF;
+	margin-top: 10%;
+	line-height: 65px;
+	z-index: 0;
+	font-family: 'Dancing Script', cursive;
+	font-weight: 700;
+	text-transform: none;
+}
+
 .subcontainer {
 	text-align: center;
 	color: #FFF;
@@ -571,7 +583,7 @@ input:services {
 	font-weight: 700;
 	text-transform: none;
 }
-/* Short Messages  *= require fullcalendar_engine/application
+/* Short Messages  
 */
 .bottom-message-section {
 	padding-bottom: 2%;
@@ -586,7 +598,7 @@ input:services {
 
 /*---------------------------------------
  **   SECTION:  OUR SERVICES             -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .services {
@@ -596,7 +608,7 @@ input:services {
 	border-top: solid 5px #FFF;
 }
 
-/* services BOX  *= require fullcalendar_engine/application
+/* services BOX  
 */
 .services-box {
 	margin-bottom: 75px;
@@ -613,7 +625,7 @@ input:services {
 	        transition: all 0.2s ease-in-out;
 }
 
-/* ON HOVER COLORED ROUNDED CIRCLE AROUND ICONS  *= require fullcalendar_engine/application
+/* ON HOVER COLORED ROUNDED CIRCLE AROUND ICONS  
 */
 .red,.green,.blue,.yellow {
 	-webkit-transition: all 0.2s ease-in-out;
@@ -646,7 +658,7 @@ input:services {
 	font-size: 14px;
 }
 
-/*----OTHER servicesES ---- *= require fullcalendar_engine/application
+/*----OTHER servicesES ---- 
 */
 .other-serviceses {
 	background: url(../images/lines.png) repeat-x center;
@@ -677,7 +689,7 @@ input:services {
 
 /*---------------------------------------
  **   SECTION:  SEPARATOR ONE         -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .separator-one {
@@ -700,7 +712,7 @@ input:services {
 
 /*---------------------------------------
  **   SECTION:  PORTFOLIO          -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .works {
@@ -709,7 +721,7 @@ input:services {
 	min-height: 800px;
 }
 
-/* IMAGE GRID  *= require fullcalendar_engine/application
+/* IMAGE GRID  
 */
 .cbp-rfgrid {
 	margin: auto;
@@ -722,7 +734,7 @@ input:services {
 	position: relative;
 	float: left;
 	overflow: hidden;
-	width: 25%; /* Fallback  *= require fullcalendar_engine/application
+	width: 25%; /* Fallback  
 */
 width: -webkit-calc(100% / 4);
 	width: calc(100% / 4);
@@ -753,7 +765,7 @@ width: -webkit-calc(100% / 4);
 	        transition-duration: 250ms;
 }
 
-/* Flexbox is used for centering the heading  *= require fullcalendar_engine/application
+/* Flexbox is used for centering the heading  
 */
 .cbp-rfgrid li a .project-info {
 	position: absolute;
@@ -800,11 +812,11 @@ width: -webkit-calc(100% / 4);
 	bottom: -50px;
 }
 
-/* media queries:  change number of items per row  *= require fullcalendar_engine/application
+/* media queries:  change number of items per row  
 */
 @media screen and (max-width: 1190px) {
 	.cbp-rfgrid li {
-	width: 25%; /* Fallback  *= require fullcalendar_engine/application
+	width: 25%; /* Fallback  
 */
 width: -webkit-calc(100% / 4);
 	width: calc(100% / 4);
@@ -812,7 +824,7 @@ width: -webkit-calc(100% / 4);
 }
 @media screen and (max-width: 1024px) {
 	.cbp-rfgrid li {
-	width: 33.33333333333333%; /* Fallback  *= require fullcalendar_engine/application
+	width: 33.33333333333333%; /* Fallback  
 */
 width: -webkit-calc(100% / 3);
 	width: calc(100% / 3);
@@ -820,7 +832,7 @@ width: -webkit-calc(100% / 3);
 }
 @media screen and (max-width: 768px) {
 	.cbp-rfgrid li {
-	width: 50%; /* Fallback  *= require fullcalendar_engine/application
+	width: 50%; /* Fallback  
 */
 width: -webkit-calc(100% / 2);
 	width: calc(100% / 2);
@@ -837,7 +849,7 @@ width: -webkit-calc(100% / 2);
 }
 }
 
-/* PROJECT DETAILS LOADER  *= require fullcalendar_engine/application
+/* PROJECT DETAILS LOADER  
 */
 #back-button {
 	display: none;
@@ -872,7 +884,7 @@ width: -webkit-calc(100% / 2);
 
 /*---------------------------------------
  **   SECTION:  ABOUT US              -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .about-us {
@@ -880,7 +892,7 @@ width: -webkit-calc(100% / 2);
 	color: #FFF;
 	padding-bottom: 100px;
 }
-.about-us .big-intro {
+.about-us .big-g {
 	text-align: right;
 	font-weight: 300;
 	font-size: 60px;
@@ -894,7 +906,7 @@ width: -webkit-calc(100% / 2);
 .about-us .column {
 	margin-bottom: 78px;
 }
-/*--SKILLS -- *= require fullcalendar_engine/application
+/*--SKILLS -- 
 */
 .skills {
 	text-align: left;
@@ -928,7 +940,7 @@ width: -webkit-calc(100% / 2);
 	color: #8f8f8f;
 }
 
-/*--OUR CLIENTS -- *= require fullcalendar_engine/application
+/*--OUR CLIENTS -- 
 */
 .our-clients {
 	background: url(../images/lines-dark.png) repeat-x center;
@@ -975,7 +987,7 @@ width: -webkit-calc(100% / 2);
 
 /*---------------------------------------
  **   SECTION:  STATS                 -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .stats {
@@ -1008,7 +1020,7 @@ width: -webkit-calc(100% / 2);
 
 /*---------------------------------------
  **   SECTION:  OUR TEAM              -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 #team-label {
 	margin-bottom: 10px;
@@ -1101,7 +1113,7 @@ width: -webkit-calc(100% / 2);
 
 /*---------------------------------------
  **   SECTION:  FEATURES              -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .features {
@@ -1129,7 +1141,7 @@ width: -webkit-calc(100% / 2);
 
 /*---------------------------------------
  **   SECTION:  Pacages               -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .packages {
@@ -1229,7 +1241,7 @@ width: -webkit-calc(100% / 2);
 
 /*---------------------------------------
 **   SECTION:  PRODUCTS             -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .products {
@@ -1242,7 +1254,7 @@ width: -webkit-calc(100% / 2);
 	padding-bottom: 70px;
 }
 
-/*--ITEMS IMAGES-- *= require fullcalendar_engine/application
+/*--ITEMS IMAGES-- 
 */
 .item-1 {
 	background-image: url(http://d13yacurqjgara.cloudfront.net/users/33345/screenshots/1394613/one-light_1x.png);
@@ -1269,7 +1281,7 @@ width: -webkit-calc(100% / 2);
 	background-image: url(http://d13yacurqjgara.cloudfront.net/users/33345/screenshots/1188444/pricing_1x.png);
 }
 
-/*---ITEM STYLE --- *= require fullcalendar_engine/application
+/*---ITEM STYLE --- 
 */
 .item {
 	width: 100%;
@@ -1347,7 +1359,7 @@ width: -webkit-calc(100% / 2);
 	color: #404040;
 	font-weight: 700;
 }
-/* ITEM DETAILS  *= require fullcalendar_engine/application
+/* ITEM DETAILS  
 */
 .item-product {
 	width: 70%;
@@ -1364,7 +1376,7 @@ width: -webkit-calc(100% / 2);
 	color: #7d7d7d;
 }
 
-/*---PRODUCT PRICE--- *= require fullcalendar_engine/application
+/*---PRODUCT PRICE--- 
 */
 .item-product-price {
 	font-size: 1em;
@@ -1387,7 +1399,7 @@ width: -webkit-calc(100% / 2);
 	        transform: rotate(-30deg);
 }
 
-/*---ITEM DESCRIPTION --- *= require fullcalendar_engine/application
+/*---ITEM DESCRIPTION --- 
 */
 .item-content {
 	background: rgba(255,255,255,.85);
@@ -1408,7 +1420,7 @@ width: -webkit-calc(100% / 2);
 
 /*---------------------------------------
  **   SECTION:  NEWSLETTER            -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 .newsletter {
 	padding-top: 62px;
@@ -1431,7 +1443,7 @@ width: -webkit-calc(100% / 2);
 
 /*----------------------------------------
  **   SECTION:  TESTIMONIAL            -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 .testimonial {
 	background: #FFF;
@@ -1500,7 +1512,7 @@ width: -webkit-calc(100% / 2);
 
 /*----------------------------------------
  **   SECTION:  PURCHASE NOW           -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .purchase-now {
@@ -1523,7 +1535,7 @@ width: -webkit-calc(100% / 2);
 
 /*----------------------------------------
  **   SECTION:  CONTACT US             -----
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
 
 .contact-us {
@@ -1539,19 +1551,20 @@ width: -webkit-calc(100% / 2);
 	float: right;
 }
 
-/* ---------------------------------------- *= require fullcalendar_engine/application
+/* ---------------------------------------- 
 */
-/*   SECTION:  FOOTER                         *= require fullcalendar_engine/application
+/*   SECTION:  FOOTER                         
 */
-/* ---------------------------------------- *= require fullcalendar_engine/application
+/* ---------------------------------------- 
 */
 
 footer {
 	background: #272727;
+  margin: 10px 0px -30px 0px;
 }
 .company-details {
 	color: #939393;
-	padding-top: 60px;
+	padding-top: 40px;
 	text-align: left;
 }
 .company-details .icon-top {
@@ -1578,15 +1591,15 @@ footer {
 	color: #054986;
 }
 
-/* =========================================  *= require fullcalendar_engine/application
+/* =========================================  
 */
-/* ----------------------------------------- *= require fullcalendar_engine/application
+/* ----------------------------------------- 
 */
-/*   SINGLE PROJECT PAGE                      *= require fullcalendar_engine/application
+/*   SINGLE PROJECT PAGE                      
 */
-/* ----------------------------------------- *= require fullcalendar_engine/application
+/* ----------------------------------------- 
 */
-/* =========================================  *= require fullcalendar_engine/application
+/* =========================================  
 */
 
 .single-project {
@@ -1629,9 +1642,9 @@ footer {
 =========================================
 RESPONSIVE STYLES
 =========================================
------------------------------------------ *= require fullcalendar_engine/application
+----------------------------------------- 
 */
-/*Respondsive pages *= require fullcalendar_engine/application
+/*Respondsive pages 
 */
 
 @media (min-width: 992px) and (max-width: 1024px) {
@@ -1646,7 +1659,7 @@ RESPONSIVE STYLES
 @media (min-width: 768px) and (max-width: 1024px) {
     
     
-    /* TOP BAR ELEMENTS  *= require fullcalendar_engine/application
+    /* TOP BAR ELEMENTS  
 */    
 	.responsive-logo {
 		width: 100%;
@@ -1671,9 +1684,15 @@ RESPONSIVE STYLES
 		margin-top: 0 !important;
 	}
      
-     /* HOME  *= require fullcalendar_engine/application
+
 */
 	.intro {
+		margin-top: 40%;
+		line-height: 3.438rem !important;
+		font-size: 2.813rem;
+	}
+  
+  	.intro-other {
 		margin-top: 31%;
 		line-height: 3.438rem !important;
 		font-size: 2.813rem;
@@ -1685,7 +1704,7 @@ RESPONSIVE STYLES
 		font-size: 2.813rem;
 	}
       
-      /* ABOUT US  *= require fullcalendar_engine/application
+      /* ABOUT US  
 */
 	.big-intro {
 		text-align: center !important;
@@ -1699,7 +1718,7 @@ RESPONSIVE STYLES
 		margin-bottom: 78px !important;
 	}
       
-      /* TEAM  *= require fullcalendar_engine/application
+      /* TEAM  
 */
 	.team-member .profile-pic {
 		width: 128px;
@@ -1709,7 +1728,7 @@ RESPONSIVE STYLES
 	.team-member .details {
 		display: none;
 	}
-      /* PURCHASE NOW  *= require fullcalendar_engine/application
+      /* PURCHASE NOW  
 */
 	.purchase-now {
 		margin: auto;
@@ -1725,10 +1744,10 @@ RESPONSIVE STYLES
 		float: none;
 	}
       
-      /* FOOTER  *= require fullcalendar_engine/application
+      /* FOOTER  
 */
 	footer {
-		padding-top: 40px;
+		padding-top: 30px;
 	}
 
 	.company-details {
@@ -1777,7 +1796,7 @@ RESPONSIVE STYLES
 		display: inline-block;
 		margin-bottom: 0;
 	}
-    /* HOME  *= require fullcalendar_engine/application
+    /* HOME  
 */
 	.header {
 		min-height: inherit;
@@ -1785,17 +1804,23 @@ RESPONSIVE STYLES
 	}
 
 	.intro {
-	    margin-top: 30%;
+	    margin-top: 40%;
 		line-height: 3.438rem !important;
 		font-size: 2.813rem;
 	}
    
+  	.intro-other {
+	    margin-top: 30%;
+		line-height: 3.438rem !important;
+		font-size: 2.813rem;
+	}
+  
 	.subcontainer {
 	    margin-top: 30%;
 		line-height: 3.438rem !important;
 		font-size: 2.813rem;
 	}   
-      /* ABOUT US  *= require fullcalendar_engine/application
+      /* ABOUT US  
 */
 	.big-intro {
 		text-align: center !important;
@@ -1810,7 +1835,7 @@ RESPONSIVE STYLES
 		margin-bottom: 78px !important;
 	}
       
-      /* PURCHASE NOW  *= require fullcalendar_engine/application
+      /* PURCHASE NOW  
 */
 	.purchase-now {
 		margin: auto;
@@ -1826,7 +1851,7 @@ RESPONSIVE STYLES
 		float: none;
 	}
       
-      /* FOOTER  *= require fullcalendar_engine/application
+      /* FOOTER  
 */
 	footer {
 		padding-top: 40px;
@@ -1850,7 +1875,7 @@ RESPONSIVE STYLES
 @media (max-width: 480px) {
  
 
-/* HOME  *= require fullcalendar_engine/application
+/* HOME  
 */
 	html {
         font-size: 70%;
@@ -1868,6 +1893,13 @@ RESPONSIVE STYLES
 		line-height: 3.438rem !important;
 		font-size: 2.813rem;
 	}
+  
+  	.intro-other {
+		margin-top: 50%;
+		line-height: 3.438rem !important;
+		font-size: 2.813rem;
+	}
+  
     	.subcontainer {
 		margin-top: 40%;
 		line-height: 3.438rem !important;
@@ -1930,11 +1962,17 @@ RESPONSIVE STYLES
     }
     
     .intro {
-        margin-top: 50%;
+        margin-top: 60%;
 		line-height: 3.1rem !important;
 		font-size: 2.1rem;
 	}
 
+      .intro-other {
+        margin-top: 50%;
+		line-height: 3.1rem !important;
+		font-size: 2.1rem;
+	}
+  
       .subcontainer {
         margin-top: 50%;
 		line-height: 3.1rem !important;

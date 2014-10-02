@@ -1,7 +1,9 @@
 ActiveAdmin.register Course do
-    # permit_params :trainer_id, :course_name, :price, :start_time, :end_time
+
   
+  filter :trainer
   filter :price
+  filter :course
   filter :start_time
   filter :end_time
   
@@ -9,17 +11,19 @@ ActiveAdmin.register Course do
     column :course_name
     column :trainer
     column :price
+    column :students_no
     actions
   end
 
   form do |f|
     f.inputs "course" do
+      f.input :trainer, allow_destroy: true, new_record: true do |q|
+        q.input :trainer
+     end
       f.input :course_name, placeholder: 'Course Name'
-      f.input :trainer
       f.input :price
       f.input :start_time
       f.input :end_time
-      # f.input :course
     end
     f.actions
   end
@@ -28,8 +32,8 @@ ActiveAdmin.register Course do
   controller do
     def permitted_params
         params.permit(
-          :course => [:trainer_id, :course_name,
-            :price, :start_time, :end_time
+          :course => [:course_name,
+            :price, :start_time, :end_time, :trainer_id
           ]
         )
     end

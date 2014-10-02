@@ -1,6 +1,5 @@
 class Lecture < ActiveRecord::Base
 	belongs_to :course
-  has_many :students
   
 #   #...................................................................................
  validates_presence_of :venue, :message =>"can't be blank"  

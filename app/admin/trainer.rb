@@ -1,4 +1,5 @@
 ActiveAdmin.register Trainer do
+  filter :courses
   filter :username
   filter :first_name
   filter :last_name
@@ -17,10 +18,10 @@ ActiveAdmin.register Trainer do
       f.input :first_name, placeholder: 'Your first name please'
       f.input :last_name, placeholder: 'Your last name please'
       f.input :username, placeholder: 'Your username please'
+      f.input :email
       f.input :phone_number, placeholder: "Phone Number"
       f.input :address, placeholder: 'P.O.Box '
       f.input :date_of_birth
-      # f.input :course
     end
     f.actions
   end
@@ -30,7 +31,7 @@ ActiveAdmin.register Trainer do
         params.permit(
           :trainer => [:first_name, :last_name,
             :username, :phone_number, :address,
-            :date_of_birth
+            :date_of_birth,:email
           ]
         )
     end

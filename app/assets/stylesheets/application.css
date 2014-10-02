@@ -615,8 +615,8 @@ input:services {
 }
 .services-box .service-icon  img{
 	margin-bottom: 30px;
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 	margin: auto;
 	border: 5px solid #ececec;
 	margin-bottom: 20px;
@@ -1108,7 +1108,7 @@ width: -webkit-calc(100% / 2);
 	color: #FFF;
 }
 .team-member .social-icons ul li a:hover {
-	color: ##054986;
+	color: #054986;
 }
 
 /*---------------------------------------

@@ -1,7 +1,8 @@
 class Course < ActiveRecord::Base
-  has_many :students
-	has_many :lectures
+  has_many :lectures
   belongs_to :trainer
+  has_many :students
+  
   
   validates_presence_of :course_name, :message =>"can't be blank"
   validates_presence_of :price, :message =>"can't be blank"
@@ -15,5 +16,5 @@ class Course < ActiveRecord::Base
 # 	# Paperclip Avatar
 #     has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 #   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-	
+  alias_attribute :name, :course_name
 end

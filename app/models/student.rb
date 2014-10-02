@@ -3,17 +3,14 @@ class Student < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
  #  devise :database_authenticatable, :registerable,
  #         :recoverable, :rememberable, :trackable, :validatable
-	# belongs_to :course
-	# has_one :trainer
- #  has_many :lectures 
-	
+  belongs_to :course
  #  #--------------------------------------------------------
  #  # validations for the student model
   
   validates_presence_of :first_name, :message =>"first name can't be blank"
   validates_presence_of :last_name, :message =>"last name can't be blank"
   validates_presence_of :username, :message =>"username can't be blank"
-  validates_presence_of :email, :message =>"email can't be blank"
+#   validates_presence_of :email, :message =>"email can't be blank"
   validates_presence_of :phone_number, :message =>"phone number can't be blank"
   validates_presence_of :address, :message =>" address can't be blank"
   validates_presence_of :date_of_birth, :message => " date of birth can't be blank"
@@ -30,7 +27,7 @@ class Student < ActiveRecord::Base
   
  #  #...............................................................
   validates_uniqueness_of :username
-  validates_uniqueness_of :email
+#   validates_uniqueness_of :email
   
  #  #.......................................................................
   validates_numericality_of :phone_number

@@ -44,6 +44,7 @@ ActiveAdmin.register_page "Dashboard" do
                         column :username  
                         column :first_name  
                         column :phone_number
+                        column :fees
                     end  
                     strong { link_to "View All Students", admin_students_path }  
                 end
@@ -51,7 +52,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
 
         column do
-            div "Column #2"
+            
         end
 
     end

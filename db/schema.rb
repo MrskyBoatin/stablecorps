@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002114934) do
+ActiveRecord::Schema.define(version: 20141002112652) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -51,9 +51,9 @@ ActiveRecord::Schema.define(version: 20141002114934) do
     t.integer  "price"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.integer  "trainer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "trainer_id"
   end
 
   create_table "lectures", force: true do |t|
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20141002114934) do
     t.integer  "phone_number"
     t.text     "address"
     t.date     "date_of_birth"
+    t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                  default: "", null: false
@@ -113,7 +114,6 @@ ActiveRecord::Schema.define(version: 20141002114934) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "student_id"
   end
 
   add_index "trainers", ["email"], name: "index_trainers_on_email", unique: true

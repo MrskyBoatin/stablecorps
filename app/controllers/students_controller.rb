@@ -28,7 +28,7 @@ class StudentsController < ApplicationController
     params.require(:student).permit(
       :username, :first_name, :last_name, :year,
       :email, :address, :phone_number, :date_of_birth,
-      :school, :year, :program_of_study
+      :school, :year, :program_of_study, :avatar, :avatar_file_name
       )
   end
 end

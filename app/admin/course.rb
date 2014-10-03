@@ -21,6 +21,8 @@ ActiveAdmin.register Course do
         q.input :trainer
      end
       f.input :course_name, placeholder: 'Course Name'
+      f.input :course_info, placeholder: 'About Course'
+      f.input :avatar, :required => false, :as => :file
       f.input :price
       f.input :start_time
       f.input :end_time
@@ -33,7 +35,7 @@ ActiveAdmin.register Course do
     def permitted_params
         params.permit(
           :course => [:course_name,
-            :price, :start_time, :end_time, :trainer_id
+            :price, :start_time, :end_time, :trainer_id, :course_info, :avatar, :avatar_file_name
           ]
         )
     end

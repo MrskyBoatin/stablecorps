@@ -24,6 +24,7 @@ ActiveAdmin.register Student do
 			f.input :first_name, placeholder: 'Your first name please'
         f.input :last_name, placeholder: 'Your last name please'
 			f.input :username, placeholder: 'Your username please'
+      f.input :avatar, :required => false, :as => :file
 			f.input :email, placeholder: 'user@domain.com'
   			f.input :phone_number, placeholder: "Phone Number"
   			f.input :address, placeholder: 'P.O.Box '
@@ -35,13 +36,23 @@ ActiveAdmin.register Student do
 		f.actions
 	end
 
+#   show do |ad|
+#   attributes_table do
+#     row :name
+#     row :avatar do
+#       image_tag(ad.avatar.url(:thumb))
+#     end
+#   end
+#  end
+  
 	controller do
 		def permitted_params
 		    params.permit(
           :student => [:course_id, :username, :first_name, :last_name, :year,
 		      :email, :address, :phone_number, :date_of_birth,
-            :school, :year, :program_of_study, :fees]
+            :school, :year, :program_of_study, :fees, :avatar, :avatar_file_name]
 		    )
 		end
 	end
+  
 end

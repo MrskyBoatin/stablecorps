@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # my personal gem
 gem 'thin'
 gem 'devise'
-gem 'faker'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'activeadmin', git: 'https://github.com/gregbell/active_admin'
 gem 'jquery-turbolinks'
 gem 'simple_form', '~> 3.1.0.rc1', git: 'https://github.com/plataformatec/simple_form'#, branch: 'master'

@@ -23,7 +23,7 @@ class TrainersController < ApplicationController
 end
 private
 def params
-  params.require(:trainer).permit(:first_name, :last_name, :email, :phone_number, :address, :date_of_birth, :email)
+  params.require(:trainer).permit(:first_name, :last_name, :email, :phone_number, :address, :date_of_birth, :email, :avatar, :avatar_file_name)
 end
 end
 end

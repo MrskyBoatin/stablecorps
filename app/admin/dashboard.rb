@@ -52,7 +52,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
 
         column do
-            
+          para " Remember to Create Trainers before you create courses, This will enable the trainer's name to appear during the course registration"
         end
 
     end

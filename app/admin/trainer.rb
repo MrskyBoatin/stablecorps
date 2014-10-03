@@ -18,6 +18,7 @@ ActiveAdmin.register Trainer do
       f.input :first_name, placeholder: 'Your first name please'
       f.input :last_name, placeholder: 'Your last name please'
       f.input :username, placeholder: 'Your username please'
+      f.input :avatar, :required => false, :as => :file
       f.input :email
       f.input :phone_number, placeholder: "Phone Number"
       f.input :address, placeholder: 'P.O.Box '
@@ -31,7 +32,7 @@ ActiveAdmin.register Trainer do
         params.permit(
           :trainer => [:first_name, :last_name,
             :username, :phone_number, :address,
-            :date_of_birth,:email
+            :date_of_birth,:email, :avatar, :avatar_file_name
           ]
         )
     end

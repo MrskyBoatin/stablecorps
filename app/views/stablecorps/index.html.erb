@@ -33,35 +33,72 @@
 <!-- </header> / END HOME SECTION  -->
 
 <!-- =========================
-   SERVICES SECTION      
+   COURSES SECTION      
+============================== -->
+<% if @courses.any?%>
+<section class="services" id="register">
+<div class="container">
+	
+	<!-- COURSES HEADER -->
+	<div class="section-header">
+		
+		<!-- COURSES TITLE -->
+		<h2 class="white-text ">Available Courses</h2>
+		
+		<!-- SHORT DESCRIPTION ABOUT THE COURSES -->
+    <h6>
+			Stablecorps also provides educational solutions among which will of tutorials and course. Listed below are some of the course offered by stablecorps. 
+		</h6>
+	</div>
+
+  	<!-- / END COURSES HEADER -->
+  
+	<!-- COURSES BOXES -->
+	<div class="row">
+    <%  @courses.each do |course| %>
+		<div class="col-lg-6 col-md-6 col-sm-6 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="2s">
+			<div class="service-icon">
+        <%= image_tag( course.avatar.url(:medium)) %>
+<!-- 				<img src="/assets/services/agric.jpg" alt="agric" /> -->
+			</div>
+      <h5 class="white-border-bottom"><%= course.name %></h5>
+      <!-- services HEADING -->
+      <h6><%= course.course_info %></h6>
+      <%= link_to "Register", new_student_path, :class => "btn btn-primary custom-button white-btn" ,"data-no-turbolink" => true %>
+		</div>
+     <% end %>
+     <% end %>
+  </div><!-- / END COURSES BOXES -->
+</div> <!-- / END CONTAINER -->
+</section><!-- / END COURSES SECTION-->
+  
+  
+<!-- =========================
+   SOLUTIONS SECTION      
 ============================== -->
 
-<section class="services" id="services">
+<section class="services wow fadeInLeftBig animated" data-wow-offset="5" data-wow-duration="2s" id="services">
 <div class="container">
 	
 	<!-- SECTION HEADER -->
 	<div class="section-header">
 		
 		<!-- SECTION TITLE -->
-		<h2 class="white-text ">Services</h2>
+		<h2 class="white-text ">Solutions</h2>
 		
 		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+		<h6>
+			Technical know how coupled with the use of hitech tools has given Stable Corps the edge to solve problems more efficiently and permanently. Through the use of systematic and standard scientific principles, we are able to provide long lasting solutions to our  customers. 
+		</h6>
 	</div>
 	<!-- / END SECTION HEADER -->
-	
-	<!-- 4 services BOXES -->
-	<div class="row">
-		
-		<!-- FIRST services BOXES -->
-		<div class="col-lg-3 col-sm-3 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="2s">
+  		<div class="col-lg-3 col-sm-3 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="2s">
 			<div class="service-icon">
-				<img src="/assets/services/agric.jpg" alt="agric" />
+				<img src="assets/services/agric.jpg" alt="agricultural solutions" />
 			</div>
-			<h5 class="white-border-bottom">Agricultural Solutions</h5> <!-- services HEADING -->
-						
-		</div>
-		<!-- / END FIRST services BOX. Other boxes has same format -->
-
+			<h5 class="white-border-bottom">Agricultural Solutions</h5>
+		</div>	
+  
 		<div class="col-lg-3 col-sm-3 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="2s">
 			<div class="service-icon">
 				<img src="assets/services/industrial.jpg" alt="industrial" />
@@ -83,13 +120,8 @@
 			</div>
 			<h5 class="white-border-bottom">Consumer Solutions</h5>
 		</div>	
- 	</div>
-
-	<!-- / END 4 services BOXES -->
-</div> <!-- / END CONTAINER -->
-  
-  
-</section>  <!-- / END services SECTION -->
+ 	</div><!-- / END CONTAINER -->
+</section>  <!-- / END SERVICES SECTION -->
 
 <!-- =========================
    OUR TEAM SECTION   
@@ -120,7 +152,6 @@
 						CEO
 					</div>
 				</div>
-
 				<div class="details">
 					<p>
 						Michael W. Takrama is the CEO, head of CAD/CAM department and co-founder of Stable Corps Company Limited (SCCL). He operates as both CEO and president of the company making sure the company vision is adhered to alongside assuring profitable returns to Stable Corps stakeholders.
@@ -130,6 +161,7 @@
 		</div>
 		<!-- / END MEMBER -->
 		
+    
 		<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -149,6 +181,7 @@
 			</div>
 		</div>
 		
+    
 		<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -169,6 +202,7 @@
 			</div>
 		</div>
 		
+    
 		<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -188,6 +222,7 @@
 			</div>
 		</div>
 		
+    
 		<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -207,6 +242,7 @@
 			</div>
 		</div>
 		
+    
 		<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -227,6 +263,7 @@
 			</div>
 		</div>
 		
+    
 		<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -247,7 +284,8 @@
 			</div>
 		</div>
 		
-		<div class="col-lg-3 col-sm-3">
+    
+		<!--<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
 				<img src="assets/team/Eric A. Temeng.jpeg" alt="">
@@ -266,6 +304,7 @@
 				</div>
 			</div>
 		</div>
+-->
 
 		<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
@@ -285,6 +324,8 @@
 					</p>
 				</div>
 			</div>
+      
+      
 		</div><div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -296,13 +337,14 @@
 						Software Engineer,IT
 					</div>
 				</div>
-
 				<div class="details">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sapiente voluptate nostrum ipsa tempora optio facilis beatae quo aut error corrupti officiis dolore accusantium rem rerum illum nulla sed quisquam.
 					</p>
 				</div>
 			</div>
+    
+    
 		</div><div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
@@ -314,14 +356,15 @@
 						Software Engineer,IT
 					</div>
 				</div>
-
 				<div class="details">
 					<p>
 						Kuseh Simon, developed an interest in programming during his university days. He loves to program during his spare time. Among the programming languages that he programs in , include c++ , c , java and  php. He also has some basics in programming languages like vb.net and ruby. Kuseh also has some knowledge in microcontroller programing. Kuseh has some experience with matlab programing especially with SISO tool’s box.
 					</p>
 				</div>
 			</div>
-		</div><div class="col-lg-3 col-sm-3">
+		</div>
+    
+    <!--<div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
 				<img src="assets/team/Raphael E. Nkrow.jpeg" alt="">
@@ -332,14 +375,15 @@
 						Software Engineer,IT
 					</div>
 				</div>
-
 				<div class="details">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sapiente voluptate nostrum ipsa tempora optio facilis beatae quo aut error corrupti officiis dolore accusantium rem rerum illum nulla sed quisquam.
 					</p>
 				</div>
 			</div>
-		</div><div class="col-lg-3 col-sm-3">
+-->
+
+		<!--</div><div class="col-lg-3 col-sm-3">
 			<div class="team-member">
 				<figure class="profile-pic">
 				<img src="assets/team/Gilbert K. Godwill.jpeg" alt="">
@@ -350,7 +394,6 @@
 						Graphics/Animation Dept
 					</div>
 				</div>
-
 				<div class="details">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sapiente voluptate nostrum ipsa tempora optio facilis beatae quo aut error corrupti officiis dolore accusantium rem rerum illum nulla sed quisquam.
@@ -358,7 +401,7 @@
 				</div>
 			</div>
 		</div>
-	</div> <!-- / END TEAM MEMBER LIST -->
+	</div> --> <!-- / END TEAM MEMBER LIST -->
 	
 </div> <!-- / END CONTAINER -->
 </section> <!-- / END OUR TEAM SECTION -->

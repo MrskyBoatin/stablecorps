@@ -220,6 +220,7 @@ $(".skill2").knob({
 });
 
 
+$('#course_outline').popover(options)
 
 /* =================================
 ===  WOW ANIMATION             ====

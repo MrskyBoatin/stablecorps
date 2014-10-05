@@ -35,7 +35,7 @@
 <!-- =========================
    HOME SECTION       
 ============================== -->
-<!-- <header id="home" class="header"> -->
+<header id="home" class="header">
 	
 	<!-- TOP BAR -->
 	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
@@ -54,6 +54,9 @@
 			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" style="height: 1px;">
 			<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">
 				<li><a href="#home">Home</a></li>
+        <% if @courses.any?%>
+        <li><a href="#register">Register</a></li>
+        <% end %>
 				<li><a href="#services">Services</a></li>
 				<li><a href="#team">Team</a></li>
 				<li><a href="#aboutus">About Us</a></li>

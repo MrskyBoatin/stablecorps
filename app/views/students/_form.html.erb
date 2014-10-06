@@ -12,8 +12,8 @@
    <div>
   <% end %>
      
-     <div class="tab-content">
-  <div class="tab-pane active" id="personal_info">
+<!--      <div class="tab-content">
+  <div class="tab-pane active" id="personal_info"> -->
    
   <%= form.input :first_name, placeholder: 'Your first name please' %>
   <%= form.input :last_name, placeholder: 'Your last name please' %>
@@ -30,12 +30,12 @@ order: [:day,:month, :year]  %>
 <!--   <%= form.input :password, hint: false, error_html: { id: 'password_error'} %> -->
 <!--   <%= form.input :password_confirmation, label: false %> -->
 <!--        <a href="new#course_selection" class="btn btn-primary custom-button white-btn">Next</a> -->
-    
-   </div>
+     <%= form.button :submit, html: { class: "btn btn-primary custom-button white-btn"  } %>
+<!--    </div>
   <div class="tab-pane" id="course_selection">
        
    </div>
-  <div class="tab-pane" id="complete_registration">         <%= form.button :submit, html: { class: "btn btn-primary custom-button white-btn"  } %> </div>
+  <div class="tab-pane" id="complete_registration">         </div> -->
 </div>
      
 <% end %>

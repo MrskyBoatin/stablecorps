@@ -8,10 +8,12 @@ class StudentsController < ApplicationController
 	end
 	
   def new
+    @courses = Course.all
     @student = Student.new
   end
   
   def create
+    @courses = Course.all
     @student = Student.new(user_params)
     puts "hey"
     puts params[:student]

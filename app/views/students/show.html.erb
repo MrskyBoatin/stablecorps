@@ -1,28 +1,87 @@
+<!-- =========================
+   HOME SECTION       
+============================== -->
+<header id="home" class="header">
+	
+	<!-- TOP BAR -->
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+		<div class="container">
+			<div class="navbar-header responsive-logo">
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+	        <%= link_to root_path,"data-no-turbolink" => true, :class => "navbar-brand"  do %>
+  <img src="/assets/logo.png" alt="Stable Corps logo" /><h1 id="logo-text"> Stable Corps</h1>
+          <% end %>
+			</div>
+		</div>
+	</div>
+	<!-- / END TOP BAR -->
+
 <div class="container">
 			<!-- HEADING -->
-	<h2 class="intro ">	<%= @student.last_name %></h2>
+  <h2 class="intro-other"> 
+    <% if flash[:notice] %>
+    <div class= "flash notice"><h2><%= flash[:notice] %><h2></div>
+   </div>
+   <%end%>
+  </h2>
 
-<section class="services wow fadeInLeftBig animated" data-wow-offset="30" data-wow-duration="4s" id="services">
+<section class="services wow fadeInLeftBig animated" data-wow-offset="30" data-wow-duration="4s">
 <div class="container">
 	
 	<!-- SECTION HEADER -->
-	<div class="section-header">
-    <% if flash[:notice] %>
-    <div class= "flash notice"><%= flash[:notice] %></div>
-    <%else%>
-		<p>Username: <%= @student.username %>
-		<br>Course: <%= @student.course.course_name %>
-		<br>Amount Paid: <%= @student.fees  %>
-		<br>Email:  <%= @student.email %>
-		<br>Phone Number:  <%= @student.phone_number %>
-		<br>School: <%= @student.school %>
-		<br>Program of Study: <%= @student.program_of_study %></p>
-		
-		<p> <%= link_to "View all Registered Students", students_path %></p>
-	</div>
-  <%end%>
-	<!-- / END 4 services BOXES -->
-</div> <!-- / END CONTAINER -->
-</section>  <!-- / END services SECTION -->
-	
+   <div class="section-header">
+      
+<p>
+    <strong>
+    Kindly secure your seat by making payment per below:
+  </strong>
+</p>
+<p>
+    <strong>Bank:</strong>
+    ECOBANK
+</p>
+<p>
+    <strong>Acc name:</strong>
+    Stable Corps
+</p>
+<p>
+    <strong>Acc No.: </strong>
+    0210034472780901
+</p>
+<p>
+    <strong>Branch:</strong>
+    Harper Road
+</p>
+<p><br />
+ <br />
+  <br />
+    You will be sent a confirmation email with all the course details once your payment is processed successfully. If we experience any problems, you will be
+    notified immediately.
+    <br/>
+    <br/>
+    Thank you,
+    <br/>
+    <br/>
+    Training Services
+    <br/>
+    The Stable Corps Company Limited
+    <br/>
+    P. O. Box KS16999
+    <br/>
+    Kumasi - Ghana
+    <br/>
+    <a href="mailto:training@staplecorps.com">training@staplecorps.com</a>
+    <br/>
+    +233(0)203732946
+</p>
+
+
+  </div><!-- / END 4 services BOXES -->
+ <!-- / END CONTAINER -->
+</section>
 </div>

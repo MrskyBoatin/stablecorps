@@ -4,7 +4,8 @@ class StudentsController < ApplicationController
 	end
 	
 	def show
-		@student = Student.find{params[:id]}
+    @student = Student.find{params[:id]}
+    @courses = Course.all
 	end
 	
   def new
@@ -15,11 +16,11 @@ class StudentsController < ApplicationController
   def create
     @courses = Course.all
     @student = Student.new(user_params)
-    puts "hey"
     puts params[:student]
     if @student.save
-      flash[:notice] = "You have successfully Registered"
-      redirect_to root
+      redirect_to student_path(@student)
+      flash.keep[:notice] = "Thank you for registering for the SCCL Training Program."
+     
     else
       render 'new'
     end 
@@ -27,7 +28,7 @@ class StudentsController < ApplicationController
   end
 
   def user_params
-    params.require(:student).permit(
+    params.require(:student).permit(:course_id,
       :username, :first_name, :last_name, :year,
       :email, :address, :phone_number, :date_of_birth,
       :school, :year, :program_of_study, :avatar, :avatar_file_name

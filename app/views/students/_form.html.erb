@@ -11,10 +11,11 @@
     </div>
    <div>
   <% end %>
-     
+  
 <!--      <div class="tab-content">
   <div class="tab-pane active" id="personal_info"> -->
-   
+  <%= form.association :course,  prompt: "Choose a Course" %>
+     <%= form.input :avatar, :label => 'Your avatar please' %>
   <%= form.input :first_name, placeholder: 'Your first name please' %>
   <%= form.input :last_name, placeholder: 'Your last name please' %>
   <%= form.input :username, placeholder: 'Your username please' %>
@@ -30,7 +31,8 @@ order: [:day,:month, :year]  %>
 <!--   <%= form.input :password, hint: false, error_html: { id: 'password_error'} %> -->
 <!--   <%= form.input :password_confirmation, label: false %> -->
 <!--        <a href="new#course_selection" class="btn btn-primary custom-button white-btn">Next</a> -->
-     <%= form.button :submit, html: { class: "btn btn-primary custom-button white-btn"  } %>
+
+     <%= form.button :submit %>
 <!--    </div>
   <div class="tab-pane" id="course_selection">
        

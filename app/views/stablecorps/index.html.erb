@@ -1,4 +1,39 @@
-	<!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
+<!-- =========================
+   HOME SECTION       
+============================== -->
+<header id="home" class="header">
+	
+	<!-- TOP BAR -->
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+		<div class="container">
+			<div class="navbar-header responsive-logo">
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>	
+          <%= link_to root_path,"data-no-turbolink" => true, :class => "navbar-brand"  do %>
+  <img src="/assets/logo.png" alt="Stable Corps logo" /><h1 id="logo-text"> Stable Corps</h1>
+          <% end %>
+			</div>
+			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" style="height: 1px;">
+			<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">
+				<li><a href="#home">Home</a></li>
+        <% if @courses.any?%>
+        <li><a href="#register">Register</a></li>
+        <% end %>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#team">Team</a></li>
+				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#testimonials">SCCL Message</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- / END TOP BAR -->	
+<!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
 	<div class="container">
 		
 		<!-- HEADING -->

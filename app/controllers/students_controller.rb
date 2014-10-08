@@ -18,6 +18,7 @@ class StudentsController < ApplicationController
     @student = Student.new(user_params)
     puts params[:student]
     if @student.save
+      StudentMailer.registration_confirmation(@student).deliver 
       redirect_to student_path(@student)
       flash.keep[:notice] = "Thank you for registering for the SCCL Training Program."
      
@@ -28,7 +29,7 @@ class StudentsController < ApplicationController
   end
 
   def user_params
-    params.require(:student).permit(:course_id,
+    params.require(:student).permit(:student_id,:course_id,
       :username, :first_name, :last_name, :year,
       :email, :address, :phone_number, :date_of_birth,
       :school, :year, :program_of_study, :avatar, :avatar_file_name

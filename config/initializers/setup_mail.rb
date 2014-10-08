@@ -1,9 +1,9 @@
-    ActionMailer::Base.smtp_settings = {  
-      :address              => "smtp.gmail.com",  
-      :port                 => 587,  
-      :domain               => "asciicasts.com",  
-      :user_name            => "asciicasts",  
-      :password             => "secret",  
-      :authentication       => "plain",  
-      :enable_starttls_auto => true  
-    }  
+ActionMailer::Base.server_settings = {
+:address => ‘smtpout.secureserver.net’,
+  :domain  => ‘www.stablecorps.com’,
+:port      => 80,
+  :user_name => ‘sboateng@stablecorps.com’,
+:password => ‘sam16boat91’,
+:authentication => :plain
+}
+

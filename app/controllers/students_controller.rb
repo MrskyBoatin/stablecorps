@@ -20,7 +20,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save
-      StudentMailer.registration_confirmation(@student).deliver 
+      StudentMailer.registration_confirmation(@student).deliver
       redirect_to student_path(@student)
       flash.keep[:notice] = "Thank you for registering for the SCCL Training Program."
     else

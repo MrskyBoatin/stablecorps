@@ -4,7 +4,7 @@
 <header id="home" class="header">
 	
 	<!-- TOP BAR -->
-	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+	<div id="visible-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
 		<div class="container">
 			<div class="navbar-header responsive-logo">
 				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -14,7 +14,7 @@
 				<span class="icon-bar"></span>
 				</button>
 	        <%= link_to root_path,"data-no-turbolink" => true, :class => "navbar-brand"  do %>
-  <img src="/assets/logo.png" alt="Stable Corps logo" /><h1 id="logo-text"> Stable Corps</h1>
+  <img src="/assets/logo.png" alt="Stable Corps logo" /><span id="logo-text"> Stable Corps</span>
           <% end %>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
   <li><a href="#complete_registration"role="tab" data-toggle="tab" >Complete Registration</a></li>
 </ul> -->
    
-    <%= render 'form' %>
+    <%= render 'form', :@student => Student.new  %>
     </div>
   </div><!-- / END 4 services BOXES -->
  <!-- / END CONTAINER -->

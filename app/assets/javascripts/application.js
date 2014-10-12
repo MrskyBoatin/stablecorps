@@ -22,7 +22,7 @@ $(".rotate").textrotator({
     });
 
 // --------------------------------------------------------
-//	Navigation Bar
+//	Navigation Bar Changing
 // -------------------------------------------------------- 	
 $(window).scroll(function(){	
 	"use strict";	

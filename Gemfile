@@ -8,6 +8,7 @@ gem 'activeadmin', git: 'https://github.com/gregbell/active_admin'
 gem 'jquery-turbolinks'
 gem 'simple_form', '~> 3.1.0.rc1', git: 'https://github.com/plataformatec/simple_form'#, branch: 'master'
 gem "font-awesome-rails"
+gem 'mail_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'

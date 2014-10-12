@@ -46,7 +46,6 @@ has_attached_file :avatar, :styles => { :medium =>     "300x300#", :thumb => "10
 validates_attachment :avatar, content_type: { content_type:     ["image/jpg", "image/jpeg", "image/png"] }
 #   validates :accepts, acceptance: { accept: true } ,:message =>"You need to agree to terms to register"
 
-  
   def recent
     @students = Student.all
   end

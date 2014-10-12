@@ -12,8 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ /*
+ *= require font-awesome
  */
-
 
 
 
@@ -470,13 +471,11 @@ input:services {
 /*----  SECTION:  HOME > TOP BAR   ---- 
 */
 .navbar {
-	background:  #FFF;
+	background-color: transparent;
 	overflow: hidden;
 	border: 0;
 	border-radius: 0 !important;
 	text-align: left;
-	-webkit-box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
-	        box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 }
 #main-nav {
 	position: absolute;
@@ -502,21 +501,16 @@ input:services {
 	line-height: 35px;
 }
 .navbar-brand {
-	height: 76px;
-	position: relative;
-	line-height: 45px;
-	display: inline-block;
-	bottom: 15px;
+  font-size: 35px; font-weight: 700; padding: 5px;
 }
 
 #logo-text {
-	font-family: Impact, Charcoal, sans-serif;
-	color: #054986;
-	display: inline-block;
-	position: relative;
-	top: 15px;
+  font-family: Impact, Charcoal, sans-serif;
+  color: #054986;
+ margin:auto;}
 
-}
+ #logo-image { margin:auto;}
+
 
 .current a {
 	color: #054986 !important;
@@ -1560,7 +1554,6 @@ width: -webkit-calc(100% / 2);
 
 footer {
 	background: #272727;
-  margin: 10px 0px -30px 0px;
 }
 .company-details {
 	color: #939393;
@@ -1576,16 +1569,16 @@ footer {
 	color: #939393;
 }
 .social {
-		margin-left: 50px;
+		margin-left: 30px;
 }
 
 .social li {
 	display: inline-block;
-	margin: 30px;
+	margin: 25px;
 }
 .social li a {
 	color: #FFF;
-	font-size: 45px;
+	font-size: 35px;
 }
 .social li a:hover {
 	color: #054986;

@@ -1,34 +1,41 @@
 class StudentsController < ApplicationController
-	def index
-		@students = Student.all
-	end
-	
+    before_action :set_student, only: [:show, :edit, :update, :destroy]
+  
+    def index
+    @students = Student.all
+  end
 	def show
     @student = Student.find{params[:id]}
-    @courses = Course.all
 	end
+  
+  def index
+		@students = Student.all
+	end
+
 	
   def new
-    @courses = Course.all
     @student = Student.new
   end
   
   def create
-    @courses = Course.all
-    @student = Student.new(user_params)
-    puts params[:student]
+    @student = Student.new(student_params)
     if @student.save
       StudentMailer.registration_confirmation(@student).deliver 
       redirect_to student_path(@student)
       flash.keep[:notice] = "Thank you for registering for the SCCL Training Program."
-     
     else
       render 'new'
     end 
-    
   end
 
-  def user_params
+   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_student
+      @student = Student.find(params[:id])
+    end
+
+  
+  def student_params
     params.require(:student).permit(:student_id,:course_id,
       :username, :first_name, :last_name, :year,
       :email, :address, :phone_number, :date_of_birth,

@@ -16,7 +16,33 @@
 //= require_tree .
 
 
+$(".rotate").textrotator({
+        separator: ",",
+    speed: 2000
+    });
 
+// --------------------------------------------------------
+//	Navigation Bar
+// -------------------------------------------------------- 	
+$(window).scroll(function(){	
+	"use strict";	
+	var scroll = $(window).scrollTop();
+	if( scroll > 700 ){		
+		$(".navbar").css("background","#fff");				
+	} else {
+		$(".navbar").css("background","transparent");
+	}
+});
+
+// --------------------------------------------------------
+//	Smooth Scrolling
+// -------------------------------------------------------- 	
+$(".navbar-nav li a[href^='#']").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $(this.hash).offset().top
+    }, 1000);
+});
 
 
 /* ================================
@@ -235,4 +261,5 @@ $(document).ready(function() {
 $('#calendar').fullCalendar()
 });
 //= require fullcalendar_engine/application
+
 

@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   devise_for :trainers
   devise_for :students
   resources :lectures
-
   resources :trainers
-
   resources :courses
 
   resources :students

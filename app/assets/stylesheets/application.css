@@ -473,12 +473,13 @@ input:services {
 .navbar {
 	background-color: transparent;
 	overflow: hidden;
-	border: 0;
+	border-bottom: 2px solid white;
 	border-radius: 0 !important;
 	text-align: left;
+  
 }
 #visible-nav {
-  background-color: #fff !important; 
+  background-color: #054986 !important; 
   	width: 100%;
 	z-index: 1000;
 	min-height: 75px;
@@ -503,7 +504,7 @@ input:services {
 	margin-right: 0 !important;
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #404040;
+	color: #fff;
 	padding: 0;
 	line-height: 35px;
 }
@@ -513,14 +514,16 @@ input:services {
 
 #logo-text {
   font-family: Impact, Charcoal, sans-serif;
-  color: #054986;
+  color: #fff;
  margin:auto;}
 
- #logo-image { margin:auto;}
+ #logo-image {
+   dispaly: hidden;
+   margin:auto;}
 
 
 .current a {
-	color: #054986 !important;
+	color: #272727 !important;
 	position: relative;
 	outline: none;
 }
@@ -531,12 +534,12 @@ input:services {
 	content: "";
 	width: 75%;
 	height: 2px;
-	background: #054986;
+	background: #272727;
 	bottom: 0px;
 	left: 12.5%;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-	color: #054986;
+	color: #272727;
 	outline: none;
 }
 .navbar-toggle {
@@ -616,8 +619,8 @@ input:services {
 }
 .services-box .service-icon  img{
 	margin-bottom: 30px;
-	width: 200px;
-	height: 200px;
+	width: 500px;
+	height: 300px;
 	margin: auto;
 	border: 5px solid #ececec;
 	margin-bottom: 20px;
@@ -1982,3 +1985,30 @@ RESPONSIVE STYLES
 		display: block;
 	}
 }
+  
+    /* --------------------------------------
+=========================================
+SOLUTIONS STYLES
+=========================================
+----------------------------------------- 
+*/
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family:'Glyphicons Halflings';
+    /* essential for enabling glyphicon */
+    content:"\e114";
+    /* adjust as needed, taken from bootstrap.css */
+    float: right;
+    /* adjust as needed */
+    color: grey;
+    /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content:"\e080";
+    /* adjust as needed, taken from bootstrap.css */
+}
+.panel-heading {
+    cursor: pointer;
+}
+

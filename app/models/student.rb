@@ -26,8 +26,8 @@ class Student < ActiveRecord::Base
   validates_length_of :email, :within => 3..255
   
  #  #...............................................................
-  validates_uniqueness_of :username
-#   validates_uniqueness_of :email
+  validates_uniqueness_of :username, :message => "Your username is not available"
+  validates_uniqueness_of :email, :message => "You have already registered with this email address"
   
  #  #.......................................................................
   validates_numericality_of :phone_number

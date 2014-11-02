@@ -42,8 +42,10 @@
 		
 		<!-- CALL TO ACTION BUTTONS -->
 		<div class="buttons">
+      <% if @courses.any?%>
 			<%= link_to "Student", new_student_path, :class => "btn btn-primary custom-button white-btn wow fadeInLeftBig animated" , :"data-wow-offset" => "30", :"data-wow-duration" => "3s" ,"data-no-turbolink" => true %>
-			<a href="#" class="btn btn-primary custom-button white-btn wow fadeInRightBig animated" data-wow-offset="30" data-wow-duration="3s">Client</a>
+      <% end%>
+			<a href="#contact" class="btn btn-primary custom-button white-btn wow fadeInRightBig animated" data-wow-offset="30" data-wow-duration="3s">Client</a>
 		</div>
 		
 		<!-- 3 SHORT MESSAGE ABOUT COMPANY -->
@@ -114,8 +116,7 @@
 <!-- =========================
    SOLUTIONS SECTION      
 ============================== -->
-
-<section class="services wow fadeInLeftBig animated" data-wow-offset="5" data-wow-duration="2s" id="services">
+<section class="services wow fadeInLeftBig animated" data-wow-offset="30" data-wow-duration="4s" id="services">
 <div class="container">
 	
 	<!-- SECTION HEADER -->
@@ -126,40 +127,14 @@
 		
 		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
 		<h6>
-			Technical know how coupled with the use of hitech tools has given Stable Corps the edge to solve problems more efficiently and permanently.       Through the use of systematic and standard scientific principles, we are able to provide long lasting solutions to our  customers. 
+			Technical know how coupled with the use of hitech tools has given Stable Corps the edge to solve problems more efficiently and permanently. Through the use of systematic and standard scientific principles, we are able to provide long lasting solutions to our  customers. 
 		</h6>
 	</div>
 	<!-- / END SECTION HEADER -->
-  		<div class="col-lg-3 col-sm-3 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="2s">
-			<div class="service-icon">
-				<img src="assets/services/agric.jpg" alt="agricultural solutions" />
-			</div>
-			<h5 class="white-border-bottom">Agricultural Solutions</h5>
-		</div>	
-  
-		<div class="col-lg-3 col-sm-3 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="2s">
-			<div class="service-icon">
-				<img src="assets/services/industrial.jpg" alt="industrial" />
-			</div>
-			<h5 class="white-border-bottom">Industrial Solutions</h5>
-		</div>	
-
-		<div class="col-lg-3 col-sm-3 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="2s">
-			<div class="service-icon">
-				<img src="assets/services/IT Solutions.jpg" alt="IT Solutions" />
-			</div>
-			<h5 class="white-border-bottom">IT Solutions</h5>
-		</div>
-
-  
-  	<div class="col-lg-3 col-sm-3 services-box blue wow bounceIn animated" data-wow-offset="30" data-wow-duration="5s" data-wow-delay="0.2s">
-			<div class="service-icon">
-				<img src="assets/services/IT Solutions.jpg" alt="IT Solutions" />
-			</div>
-			<h5 class="white-border-bottom">Consumer Solutions</h5>
-		</div>	
- 	</div><!-- / END CONTAINER -->
-</section>  <!-- / END SERVICES SECTION -->
+<%=render "solutions/index" %>
+	<!-- / END 5 services BOXES -->
+</div> <!-- / END CONTAINER -->
+</section>  <!-- / END services SECTION -->
 
 <!-- =========================
    OUR TEAM SECTION   
@@ -538,10 +513,7 @@
 		</div> 
 
 	<!-- SUBSCRIPTION FORM -->
-	<form action="#" class="subscription wow lightSpeedIn animated" data-wow-offset="0" data-wow-duration="2s" data-wow-delay="2s" role="form">
-		<input type="email" placeholder="Enter email" class="form-control input-box">
-		<button class="btn btn-primary custom-button white-btn">Sign Up</button>
-	</form>
+   
 	<!-- / END SUBSCRIPTION FORM -->
 	
 	</div> <!-- / END CONTAINER -->

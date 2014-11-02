@@ -22,13 +22,18 @@ $(".rotate").textrotator({
     });
 
 // --------------------------------------------------------
+//	SOLUTIONS
+// -------------------------------------------------------- 	
+
+
+// --------------------------------------------------------
 //	Navigation Bar Changing
 // -------------------------------------------------------- 	
 $(window).scroll(function(){	
 	"use strict";	
 	var scroll = $(window).scrollTop();
-	if( scroll > 700 ){		
-		$(".navbar").css("background","#fff");				
+	if( scroll > 800 ){		
+		$(".navbar").css("background","#054986");
 	} else {
 		$(".navbar").css("background","transparent");
 	}

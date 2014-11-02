@@ -1,0 +1,13 @@
+<%= simple_form_for(@newsletter, html: { class: 'form-horizontal' }) do
+  <%= f.error_notification %>
+	<form action="#" class="subscription wow lightSpeedIn animated" data-wow-offset="0" data-wow-duration="2s" data-wow-delay="2s" role="form">
+		<input type="email" placeholder="Enter email" class="form-control input-box">
+		<button class="btn btn-primary custom-button white-btn">Sign Up</button>
+	</form>
+<!--   <div class="form-inputs">
+  </div>
+
+  <div class="form-actions"> -->
+    <%= f.button :submit %>
+<!--   </div> -->
+<% end %>

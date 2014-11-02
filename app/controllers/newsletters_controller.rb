@@ -1,16 +1,31 @@
 class NewslettersController < InheritedResources::Base
+
     def new
     @newsletter = Newsletter.new
   end
 
-  def create
-    @newsletter = Newsletter.new(params[:Newsletter])
-    @newsletter.request = request
-    if @newsletter.deliver
-      flash.now[:notice] = 'Thank you for your message. We will Newsletter you soon!'
+
+    def create
+    @newsletter = Newsletter.new(newsletter_params)
+      if @newsletter.save
+        NewsletterMailer.newsletter_confirmation(@newsletter).deliver
+      redirect_to root_path
+      flash[:notice] = "Thank you for subscribing."
     else
-      flash.now[:error] = 'Cannot send message,check your input parameters.'
-      render :new
-    end
+        flash[:notice] = "Cannot add you to subscription list,check your input parameters."
+        redirect_to root_path
+    end 
   end
-end
+  
+   private
+    # Use callbacks to share common setup or constraints between actions.
+  def set_newsletter
+    @newsletter = Newsletter.find(params[:id])
+    end
+
+  
+  def newsletter_params
+    params.require(:newsletter).permit(:email
+      )
+  end
+  end

@@ -1,3 +1,3 @@
 class Newsletter < ActiveRecord::Base
-    validates_presence_of :email, :message =>"Email can't be blank"
+   validates_uniqueness_of :email, :message => "You have already registered with this email address"
 end

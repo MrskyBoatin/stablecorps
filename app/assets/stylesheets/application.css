@@ -558,11 +558,9 @@ input:services {
 .intro {
 	text-align: center;
 	color: #FFF;
-	margin-top: 57%;
+	margin-top: 40%;
 	line-height: 65px;
 	z-index: 0;
-	font-family: 'Dancing Script', cursive;
-	font-weight: 700;
 	text-transform: none;
 }
 

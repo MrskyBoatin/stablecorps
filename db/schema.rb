@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20141031180253) do
   end
 
   create_table "newsletters", force: true do |t|
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

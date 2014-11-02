@@ -1,13 +1,17 @@
-<%= simple_form_for(@newsletter, html: { class: 'form-horizontal' }) do
-  <%= f.error_notification %>
-	<form action="#" class="subscription wow lightSpeedIn animated" data-wow-offset="0" data-wow-duration="2s" data-wow-delay="2s" role="form">
-		<input type="email" placeholder="Enter email" class="form-control input-box">
-		<button class="btn btn-primary custom-button white-btn">Sign Up</button>
-	</form>
-<!--   <div class="form-inputs">
-  </div>
+<%= form_for(@newsletter, html: { class: "subscription wow lightSpeedIn animated" ,:"data-wow-offset" => "0" , :"data-wow-duration" => "2s" , :"data-wow-delay" => "2s" , :role => "form" }) do |f| %>
+<% if @newsletter.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@newsletter.errors.count, "error") %> prohibited this course from being saved:</h2>
+<ul>
+  <% @newslettter.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
 
-  <div class="form-actions"> -->
-    <%= f.button :submit %>
-<!--   </div> -->
+  <%= f.text_field :email , :placeholder => "Enter email", :class => "form-control input-box"  %>
+
+<%= f.submit 'Sign Up', class: "btn btn-primary custom-button white-btn" %>
+
 <% end %>

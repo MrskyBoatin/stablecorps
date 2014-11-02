@@ -38,8 +38,10 @@
 	<div class="container">
 
 		<!-- HEADING -->
-		<div class="intro "></div> <!-- dedicated to wonder-->
-		
+        <% if flash[:notice] %>
+    <div class= "intro"><h3><%= flash[:notice] %></h3></div>
+   <%end%>
+	
 		<!-- CALL TO ACTION BUTTONS -->
 		<div class="buttons">
       <% if @courses.any?%>
@@ -513,7 +515,7 @@
 		</div> 
 
 	<!-- SUBSCRIPTION FORM -->
-   
+    <%= render "newsletters/new", :@newsletter => Newsletter.new %> 
 	<!-- / END SUBSCRIPTION FORM -->
 	
 	</div> <!-- / END CONTAINER -->

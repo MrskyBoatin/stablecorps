@@ -1,20 +1,33 @@
 	<div class="row">
-		<form role="form" action="”mailto:obama@whitehouse.gov?subject=Congrats%20Obama”" class="contact-form">
+    <%= form_for(@contact, html: { :class => "contact-form" , :role => "form" }) do |f| %>
+<% if @contact.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this course from being saved:</h2>
+<ul>
+  <% @contact.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
 			<div class="wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-			<div class="col-lg-4 col-sm-4">
-				<input type="text" name="name" placeholder="Your Name" class="form-control input-box">
-			</div>
-			<div class="col-lg-4 col-sm-4">
-				<input type="email" name="email" placeholder="Your Email" class="form-control input-box">
-			</div>
-			<div class="col-lg-4 col-sm-4">
-				<input type="text" name="subject" placeholder="Subject" class="form-control input-box">
-			</div>
-			</div>
-			
-			<div class="col-md-12 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-				<textarea name="message" class="form-control textarea-box" placeholder="Your Message"></textarea>
-			</div>
-			<button class="btn btn-primary custom-button white-btn wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s" type="submit">Send Message</button>
-		</form>
-	</div>
+			  <div class="col-lg-4 col-sm-4">
+          <%= f.text_field :name , :placeholder => "Your Name", :class => "form-control input-box"  %>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <%= f.text_field :email , :placeholder => "Your Email", :class => "form-control input-box"  %>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <%= f.text_field :subject , :placeholder => "Subject", :class => "form-control input-box"  %>
+        </div>
+        </div>
+    		<div class="col-md-12 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+          <%= f.text_area :message, :class => "form-control textarea-box", :placeholder => "Your Message" %>
+			  </div>
+        
+
+    <%= f.submit 'Send Message', :class => "btn btn-primary custom-button white-btn wow fadeInLeft animated",:'data-wow-offset' => "30", :'data-wow-duration' => "1.5s" , :'data-wow-delay' => "0.15s" %>
+<% end %>
+    </div>
+
+	
